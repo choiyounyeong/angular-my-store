@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+  background: #f08080;
+  color: #fff;
+  padding: 12px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.navbar {
+  padding: 0px 12px;
+  font-size: 15px;
+}
+
+a {
+  color: #ffffff;
+}
