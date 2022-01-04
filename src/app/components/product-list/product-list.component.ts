@@ -18,4 +18,7 @@ export class ProductListComponent implements OnInit {
       this.products = data;
     });
   }
+
+  // addToCart(): void {
+  // }
 }

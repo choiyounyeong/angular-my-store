@@ -1,0 +1,23 @@
+.product-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin-bottom: 64px;
+}
+
+.product-image {
+  border: 1px solid rgb(253, 219, 205);
+  padding: 25px;
+  width: 230px;
+  height: 350px;
+}
+
+.product-button {
+  background-color: #fa947d;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 16px;
+}
