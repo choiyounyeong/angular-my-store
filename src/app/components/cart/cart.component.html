@@ -1,1 +1,10 @@
 <app-checkout-form></app-checkout-form>
+
+<div *ngFor="let product of getProductsInCart()">
+    <img class="product-image" src="{{ product.url }}">
+    {{ product.name }}
+    <br>
+    ${{ product.price}}
+    <br>
+    <input type="number" [(ngModel)]="product.quantity"/>
+  </div>

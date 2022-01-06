@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { ProductInCart } from '../models/product-in-cart';
 
 @Injectable({
@@ -30,6 +29,10 @@ export class CartService {
     } else {
       this.cart.push(product);
     }
+  }
+
+  getCart(): ProductInCart[] {
+    return this.cart;
   }
 
   clearCart(): void {
