@@ -9,6 +9,8 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-form.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import { HeaderComponent } from './layout/header/header.component';
     ConfirmationComponent,
     CartComponent,
     HeaderComponent,
+    CheckoutFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
