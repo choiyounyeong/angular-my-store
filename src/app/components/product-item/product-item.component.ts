@@ -10,6 +10,7 @@ import { ProductInCart } from 'src/app/models/product-in-cart';
 export class ProductItemComponent implements OnInit {
   @Input() product: Product | undefined;
   @Output() addProduct: EventEmitter<ProductInCart> = new EventEmitter();
+  @Output() productDetail: EventEmitter<Product> = new EventEmitter();
 
   selectedValue: number = 1;
   constructor() {}
@@ -25,5 +26,9 @@ export class ProductItemComponent implements OnInit {
       quantity: this.selectedValue,
     };
     this.addProduct.emit(productInCart);
+  }
+
+  detailedPage(product: Product) {
+    this.productDetail.emit(product);
   }
 }

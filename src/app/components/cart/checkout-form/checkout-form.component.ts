@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'app-checkout-form',
   templateUrl: './checkout-form.component.html',

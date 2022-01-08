@@ -1,4 +1,5 @@
 .cart-checkoutForm {
-  width: 100px;
-  border-radius: 10px;
+  position: absolute;
+  margin-left: 20px;
+  width: 200px;
 }

@@ -9,5 +9,5 @@
     <label>Credit Card Number: </label><br/>
     <input type='text' name='creditCard' required minlength="16" placeholder="(16-digit number)" [(ngModel)]="creditCard">
     <br/><br/>
-    <input [disabled]="form.invalid" type="submit" value="Submit" class="btn btn-primary" />
+    <input [disabled]="form.invalid" type="submit" value="Submit" class="btn btn-primary" routerLink="/confirm">
 </form>

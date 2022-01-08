@@ -1,10 +1,8 @@
 <div *ngIf="product">
-  <img class="product-image" src="{{ product.url }}">
-  {{ product.name }}
-  <br>
-  ${{ product.price}}
-  <br>
-  <select [(ngModel)]="selectedValue">
+  <img class="product-image" src="{{ product.url }}" routerLink="/detail">
+  <div class="product-name">{{ product.name }}</div>
+  <div class="product-price">${{ product.price }}</div>
+  <select [(ngModel)]="selectedValue" class="product-quantity">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>

@@ -1,17 +1,20 @@
 .header {
   text-align: center;
   background: #f08080;
-  color: #fff;
+  color: #ffffff;
   padding: 12px;
   font-size: 40px;
   font-weight: bold;
 }
 
 .navbar {
+  color: #ffffff;
   padding: 0px 12px;
   font-size: 15px;
 }
 
-a {
+.numberOfProducts {
   color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
 }
