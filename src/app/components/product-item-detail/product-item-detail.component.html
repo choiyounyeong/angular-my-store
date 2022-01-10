@@ -1,1 +1,6 @@
-<p>product-item-detail works!</p>
+<div class="detail-container" *ngIf="product">
+    <img src={{product.url}}/>
+    <h3>{{product.name}}</h3>
+    <p>{{product.price}}</p>
+    <p>{{product.description}}</p>
+</div>

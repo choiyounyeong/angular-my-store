@@ -1,5 +1,5 @@
 <div *ngIf="product">
-  <img class="product-image" src="{{ product.url }}" routerLink="/detail">
+  <img class="product-image" src="{{ product.url }}" routerLink="/detail/{{ product.id }}">
   <div class="product-name">{{ product.name }}</div>
   <div class="product-price">${{ product.price }}</div>
   <select [(ngModel)]="selectedValue" class="product-quantity">
