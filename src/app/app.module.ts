@@ -10,7 +10,6 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 import { CartComponent } from './components/cart/cart.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FormsModule } from '@angular/forms';
-import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-
     ConfirmationComponent,
     CartComponent,
     HeaderComponent,
-    CheckoutFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
