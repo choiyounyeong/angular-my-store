@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { PurchaseInfo } from 'src/app/models/customer-info';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -7,14 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./confirmation.component.css'],
 })
 export class ConfirmationComponent implements OnInit {
-  name: string = '';
-  totalPrice: string = '';
-  constructor(private route: ActivatedRoute) {}
+  purchaseInfo: PurchaseInfo | undefined;
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.name = params['name'];
-      this.totalPrice = params['totalPrice'];
-    });
+    this.purchaseInfo = this.cartService.retrieveAndDeletePurchaseInfo();
   }
 }

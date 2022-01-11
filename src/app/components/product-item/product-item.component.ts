@@ -23,7 +23,7 @@ export class ProductItemComponent implements OnInit {
       name: product.name,
       url: product.url,
       price: product.price,
-      quantity: this.selectedValue,
+      quantity: Number(this.selectedValue),
     };
     this.addProduct.emit(productInCart);
   }

@@ -11,16 +11,6 @@
   align-items: center;
 }
 
-.confirmation-header {
-  color: #ff5733;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.confirmation-item {
-  margin-bottom: 30px;
-}
-
 .confirmation-button {
   background-color: #fa947d;
   border: none;

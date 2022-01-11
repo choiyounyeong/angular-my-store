@@ -12,18 +12,9 @@
   padding: 10px 10px;
   text-align: center;
   font-size: 16px;
-}
-
-.product-name {
-  font-weight: bold;
   margin-top: 10px;
 }
 
-.product-price {
-  margin-top: 5px;
-}
-
-.product-quantity {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.product-details {
+  margin: 50px;
 }
