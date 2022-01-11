@@ -1,12 +1,9 @@
 <div class="detail-container" *ngIf="product">
-    <img src={{product.url}}/>
-    <br>
-    <h3>{{product.name}}</h3>
-    <br>
-    <p>{{product.price}}</p>
-    <br>
-    <p>{{product.description}}</p>
-    <br>
+  <img class="img" src={{product.url}}/>
+  <div class="details">
+    <h3>{{ product.name }}</h3>
+    <p>${{ product.price }}</p>  
+    <p>{{ product.description }}</p>
     <select [(ngModel)]="selectedValue" class="product-quantity">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -18,7 +15,8 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
-      </select>
-      <br>
+    </select>
     <button class="product-button" (click)="addSelectedProduct(product)">Add to cart</button>
+    <p class="back-link" routerLink="/">← Back to Product List</p>
+  </div>
 </div>

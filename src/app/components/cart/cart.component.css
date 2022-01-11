@@ -5,6 +5,11 @@
   height: 220px;
 }
 
+.checkout-form {
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
 .form-margin {
   margin-top: 20px;
   margin-bottom: 12px;
