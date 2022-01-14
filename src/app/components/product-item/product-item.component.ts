@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductInCart } from 'src/app/models/product-in-cart';
 
@@ -13,7 +14,7 @@ export class ProductItemComponent implements OnInit {
   @Output() productDetail: EventEmitter<Product> = new EventEmitter();
 
   selectedValue: number = 1;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -26,6 +27,9 @@ export class ProductItemComponent implements OnInit {
       quantity: Number(this.selectedValue),
     };
     this.addProduct.emit(productInCart);
+  }
+  navigateToDetail(product: Product) {
+    this.router.navigateByUrl(`detail/${product.id}`, { state: product });
   }
 
   detailedPage(product: Product) {

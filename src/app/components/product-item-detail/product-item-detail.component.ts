@@ -24,8 +24,8 @@ export class ProductItemDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.productService.getProductById(params['id']).subscribe((data) => {
-        this.product = data;
+      this.productService.getProducts().subscribe((data) => {
+        this.product = data.find((p) => p.id == params['id']);
       });
     });
   }

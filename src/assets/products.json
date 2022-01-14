@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Americano",
+    "price": "200.00",
+    "url": "https://images.unsplash.com/photo-1551030173-122aabc4489c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "description": "Black coffee"
+  },
+  {
+    "id": 2,
+    "name": "Cafe Latte",
+    "price": "230.00",
+    "url": "https://images.unsplash.com/photo-1607278967704-7537440679e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "description": "Coffee with mild milk"
+  },
+  {
+    "id": 3,
+    "name": "Cafe mocha",
+    "price": "250.00",
+    "url": "https://images.unsplash.com/photo-1621221814631-e8bfdabd5ca4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "description": "Bittersweet mocha sauce and steamed milk"
+  },
+  {
+    "id": 4,
+    "name": "Cappuccino",
+    "price": "250.00",
+    "url": "https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "description": "Dark, rich espresso with a layer of thick milk foam"
+  },
+  {
+    "id": 5,
+    "name": "Caramel Macchiato",
+    "price": "250.00",
+    "url": "https://images.unsplash.com/photo-1570517130750-10c67ffdde09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+    "description": "Coffee with steamed milk and vanilla-flavored syrup"
+  }
+]
