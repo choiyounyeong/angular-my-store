@@ -7,8 +7,8 @@
                 <input class="number-input" type="number" min="1" [(ngModel)]="product.quantity" (change)="quantityChanged()"/>
                 <button class="remove-button" type="button" (click)="removeProduct(product.id)">Remove</button>
         </div>
-        <h3 *ngIf="purchaseInfo.totalPrice !== 0">Total Price: ${{ purchaseInfo.totalPrice }}</h3>
-        <h3 *ngIf="purchaseInfo.totalPrice === 0">Your cart is empty...</h3>
+        <h3 *ngIf="purchaseInfo.totalPrice !== 0;else empty">Total Price: ${{ purchaseInfo.totalPrice }}</h3>
+        <ng-template #empty>Your cart is empty...</ng-template>
     </div>
             <form class="checkout-form" (ngSubmit)="checkoutSuccess()" #form="ngForm" >
             <h2> Billing address </h2>
