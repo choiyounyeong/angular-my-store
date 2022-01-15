@@ -10,6 +10,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 import { CartComponent } from './components/cart/cart.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,14 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -3,6 +3,7 @@ import { ProductService } from 'src/app/product.service';
 import { Product } from 'src/app/models/product';
 import { ProductInCart } from 'src/app/models/product-in-cart';
 import { CartService } from 'src/app/services/cart.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -13,7 +14,8 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private cartService: CartService
+    private cartService: CartService,
+    private snackBar: MatSnackBar
   ) {
     this.products = [];
   }
@@ -26,6 +28,13 @@ export class ProductListComponent implements OnInit {
 
   addToCart(product: ProductInCart): void {
     this.cartService.addToCart(product);
-    alert('Successfully added item to cart!');
+    this.snackBar.open(
+      `${product.name} x ${product.quantity} : successfully added to cart!`,
+      '!',
+      {
+        duration: 3000,
+        horizontalPosition: 'center',
+      }
+    );
   }
 }

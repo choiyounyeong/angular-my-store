@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/product.service';
 import { ProductInCart } from 'src/app/models/product-in-cart';
 import { CartService } from 'src/app/services/cart.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-item-detail',
@@ -19,7 +20,8 @@ export class ProductItemDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private cartService: CartService
+    private cartService: CartService,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -39,6 +41,13 @@ export class ProductItemDetailComponent implements OnInit {
       quantity: Number(this.selectedValue),
     };
     this.cartService.addToCart(productInCart);
-    alert('Successfully added item to cart!');
+    this.snackBar.open(
+      `${productInCart.name} x ${productInCart.quantity} : successfully added to cart!`,
+      '!',
+      {
+        duration: 3000,
+        horizontalPosition: 'center',
+      }
+    );
   }
 }
