@@ -4,7 +4,7 @@
             <img class="img" src="{{ product.url }}">
                 <h4>{{ product.name }}</h4>
                 <p>${{ product.price }}</p>
-                <input class="number-input" type="number" min="1" [(ngModel)]="product.quantity" (change)="quantityChanged()"/>
+                <input class="number-input" type="number" min="1" [(ngModel)]="product.quantity" (change)="quantityChanged(product)"/>
                 <button class="remove-button" type="button" (click)="removeProduct(product.id)">Remove</button>
         </div>
         <h3 *ngIf="purchaseInfo.totalPrice !== 0;else empty">Total Price: ${{ purchaseInfo.totalPrice }}</h3>

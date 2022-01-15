@@ -45,7 +45,7 @@ export class ProductItemDetailComponent implements OnInit {
       `${productInCart.name} x ${productInCart.quantity} : successfully added to cart!`,
       '!',
       {
-        duration: 3000,
+        duration: 2000,
         horizontalPosition: 'center',
       }
     );

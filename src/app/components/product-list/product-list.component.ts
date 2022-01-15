@@ -32,7 +32,7 @@ export class ProductListComponent implements OnInit {
       `${product.name} x ${product.quantity} : successfully added to cart!`,
       '!',
       {
-        duration: 3000,
+        duration: 2000,
         horizontalPosition: 'center',
       }
     );

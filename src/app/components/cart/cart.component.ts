@@ -3,6 +3,7 @@ import { ProductInCart } from 'src/app/models/product-in-cart';
 import { CartService } from 'src/app/services/cart.service';
 import { Router } from '@angular/router';
 import { PurchaseInfo } from 'src/app/models/customer-info';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cart',
@@ -21,14 +22,22 @@ export class CartComponent implements OnInit {
     totalPrice: 0,
   };
 
-  constructor(private cartService: CartService, private route: Router) {}
+  constructor(
+    private cartService: CartService,
+    private route: Router,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.updateTotalPrice();
   }
 
-  quantityChanged(): void {
+  quantityChanged(product: ProductInCart): void {
     this.updateTotalPrice();
+    this.snackBar.open(`The quantity of ${product.name} is changed`, '!', {
+      duration: 2500,
+      horizontalPosition: 'center',
+    });
   }
 
   updateTotalPrice(): void {
