@@ -21,7 +21,7 @@
             <span class="error" *ngIf="addressInvalidMessage.length>0">{{addressInvalidMessage}}</span>
             <br><br>
             <label>Credit Card Number: </label><br>
-            <input type='text' name='creditCard' required minlength="16" placeholder="(16-digit number)" [(ngModel)]="purchaseInfo.creditCard" (ngModelChange)="validateCard()">
+            <input type='text' name='creditCard' required minlength="16" maxlength="16" placeholder="(16-digit number)" [(ngModel)]="purchaseInfo.creditCard" (ngModelChange)="validateCard()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
             <span class="error" *ngIf="cardInvalidMessage.length>0">{{cardInvalidMessage}}</span>
             <br><br>
             <input [disabled]="form.invalid || purchaseInfo.totalPrice === 0 " type="submit" value="Submit" class="btn btn-primary submit-button">
